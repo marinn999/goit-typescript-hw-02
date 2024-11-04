@@ -1,8 +1,9 @@
-import React from "react";
+import { FC } from "react";
 import ImageCard from "../ImageCard/ImageCard";
 import s from "./ImageGallery.module.css";
+import { ImageGalleryProps } from "./ImageGallery.types";
 
-const ImageGallery = ({ images, openModal }) => {
+const ImageGallery: FC<ImageGalleryProps> = ({ images, openModal }) => {
   return (
     <div>
       <ul className={s.list}>

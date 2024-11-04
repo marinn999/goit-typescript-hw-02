@@ -1,9 +1,11 @@
 import ReactModal from "react-modal";
 import s from "./ImageModal.module.css";
+import { FC } from "react";
+import { ImageModalProps } from "./ImageModal.types";
 
-const ImageModal = ({ dataModal, isOpen, closeModal }) => {
+const ImageModal: FC<ImageModalProps> = ({ dataModal, isOpen, closeModal }) => {
   return (
-    <ReactModal isOpen={isOpen} onRequestClose={closeModal} style={s.modal}>
+    <ReactModal isOpen={isOpen} onRequestClose={closeModal} className={s.modal}>
       <p className={s.helper}>Press Esc to close or click anywhere</p>
       {dataModal.description && (
         <p className={s.descr}>{dataModal.description}</p>

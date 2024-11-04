@@ -9,6 +9,6 @@
 }
 .item {
   width: calc((100% - 80px) / 5);
-  height: 150px;
+  height: 300px;
   overflow: hidden;
 }
